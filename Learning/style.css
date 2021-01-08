@@ -202,7 +202,7 @@ ul li a {
 text-decoration: none;
 display:block;
 color: white;
-font-size: 14px;
+font-size: 17px;
 font-family: cursive;
 padding: 0 20px;
 text-align: center;
@@ -211,11 +211,7 @@ ul li a:hover {
 color: blue;
 display: block;
 }
-* {
-  margin: 0;
-  padding: 0;
 
-}
 .menus {
   width: 100%;
   height: 100px;;
