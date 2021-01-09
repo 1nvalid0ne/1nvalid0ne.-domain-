@@ -103,12 +103,315 @@ input, select {
 }
 
 /* my formatting */
+/* ----------------------tablet website is still broken so i'll have to patch that------------------------------ */
 *{
   text-decoration: none;
 }
-* a:hover{
+* li a:hover{
   text-decoration: underline;
 }
-.page{
+/* setting page background color as black */
+html{
   background-color: black;
+}
+.wrapper{
+  width: 70%;
+  margin: 0 auto;
+}
+/* formatting and adding fonts */
+@font-face{
+  src: url(../fonts/d3dig.ttf);
+  font-family: d3dig;
+}
+@font-face {
+  src: url(../fonts/digfireb.ttf);
+  font-family: digfireb;
+}
+@font-face {
+  src: url(../fonts/wwDigital.ttf);
+  font-family: wwdig;
+}
+@font-face {
+  src: url(../fonts/MHbody.ttf);
+  font-family: MHbody;
+}
+@font-face {
+  src: url(../fonts/digcoll.ttf);
+  font-family: digcoll;
+}
+        /* desktop formatting */
+        @media only screen and (min-width: 1000px){
+          * a:hover{
+            color: red;
+          }
+            header .header-brand{
+              text-align: center;
+            }
+            header nav ul li{
+              padding-top: 10px;
+            }
+            header .header-brand:hover{
+              text-shadow: 2px 2px 8px red;
+            }
+            header .header-link{
+              display: block;
+              font-family: wwdig;
+              font-size: 25px;
+              color: #61F08E;
+              float:right;
+              padding-right: 35px;
+              padding-bottom: 15px;
+            }
+            header .header-link:hover{
+              text-shadow: 2px 2px 8px red;
+
+            }
+            .index-banner{
+              height: 400px;
+            }
+            .index-boxlinks div{
+              margin: 10px 10px 0;
+              height: 220px;
+              background-color: #111;
+              float: left;
+              border: 2px solid #61F08E;
+              padding-left: 47px;
+            }
+            .index-bl-1{
+              width: calc(45% - 20px) !important;
+            }
+            .index-bl-2{
+              width: calc(45% - 20px) !important;
+            }
+            .index-boxlinks div h3:hover{
+              text-shadow: 2px 2px 8px red;
+            }
+            .footer-m2{
+              display: block;
+              font-family: wwdig;
+              font-size: 15px;
+              color: #61F08E;
+              float: left;
+              padding-left: 30px;
+            }
+            .footer-m2-head{
+              font-size: 20px;
+              border-bottom: 1px solid #61F08E;
+              text-align: center;
+            }
+            p{
+              font-size: 27px !important;
+              line-height: 25px;
+              width:auto;
+            }
+            h2{
+              font-size: 37px !important;
+
+            }
+            .contact-text p{
+              font-size: 32px !important;
+            }
+        }
+        /* end of desktop formatting */
+/* formatting the menus */
+header{
+  background-color: #111;
+  width: 100%;
+  height: 125px;
+  border-bottom: 2px solid #61F08E;
+}
+header .header-brand{
+  font-family: wwdig;
+  font-size: 60px;
+  color: #61F08E;
+  padding: 12px 80px;
+  margin: 0 20px;
+  display: block;
+}
+        /* start of mobile config */
+          @media only screen and (max-width: 900px){
+        header .header-link{
+          display:none;
+        }
+        .footer-m2{
+          display: none;
+        }
+        .navigation{
+          display: none;
+        }
+        header .header-brand{
+          font-size: 45px;
+          padding: 20px 60px;
+          text-align: center;
+        }
+        header nav ul{
+          width: 100%;
+        }
+        header nav ul li{
+          margin: 0 auto;
+        }
+        /*end of mobile config*/                          }
+header nav ul{
+  display: block;
+  margin: 0px 60px;
+  width: fit-content;
+}
+header nav ul li{
+  float:left;
+  list-style: none;
+  display: inline-block;
+  padding: 0px 16px;
+  border-right: 1px solid #61F08E;
+}
+header nav ul li a{
+  font-family: wwdig;
+  font-size: 17px;
+  color: #61F08E;
+  display: block;
+}
+/* coding the banner  (index)*/
+.index-banner{
+  width: 100%;
+  height: calc(100vh - 150px);
+  background-image: url('../images/site-banner.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: table;
+}
+.vert-cent {
+  display: table-cell;
+  vertical-align: middle;
+}
+.index-banner h2{
+  font-family: digcoll;
+  color: #fff;
+  font-size: 60px;
+  text-align: center;
+  text-shadow: 2px 2px 8px #61F08E;
+  line-height: 100px;
+  text-transform: uppercase;
+}
+/* designing and formatting the box links (bl) */
+
+.index-boxlinks div{
+  margin: 16px 16px 0;
+  width: calc(100vw - 32px);
+  height: 100px;
+  background-color: #111;
+
+}
+.index-boxlinks div h3{
+  color: #61F08E;
+  font-family: d3dig;
+  font-style: italic;
+  font-size: 28px;
+  text-align: center;
+  line-height: 100px;
+  text-transform: uppercase;
+
+}
+/* styling and creating the footer */
+footer{
+  width: calc(100% - 80px);
+  padding: 40px 40px
+  margin-top: 20px
+
+}
+footer ul {
+  width: fit-content;
+  float: left;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+footer ul li{
+  display: block;
+  list-style: none
+  line-height: 60px
+}
+footer ul li a{
+  text-decoration: none;
+  color: #61F08E;
+  font-family: wwdig;
+  display: block;
+  padding: 0 25px;
+  font-size: 20px;
+  line-height: 37px;
+
+}
+/* img formatting */
+.footer-sm{
+  width: 60px;
+  float: right;
+  padding-top: 20px;
+/* overflow: hidden;*/
+}
+.footer-sm img {
+  width: 50px;
+margin-bottom: 10px;
+}
+/* styling text inside the website */
+main h2{
+  font-family: wwdig;
+  font-style: italic;
+  color: #61F08E;
+  display: block;
+  font-size: 28px;
+  text-decoration: underline;
+}
+p{
+  padding-top: 10px;
+  font-family: MHbody;
+  color: #C3C9D6;
+  text-indent: 20px;
+  font-size: 18px;
+}
+.credit{
+  color: #61F08E;
+}
+.about-main{
+  padding: 50px 0;
+}
+/* contact page banner formatting */
+/* coding the banner  (contact page)*/
+.contact-banner{
+  width: 100%;
+  height: calc(100vh - 150px);
+  background-image: url('../images/contact-banner.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: table;
+}
+.vert-cent {
+  display: table-cell;
+  vertical-align: middle;
+}
+.contact-banner h2{
+  font-family: digcoll;
+  color: #fff;
+  font-size: 45px;
+  text-align: center;
+  text-shadow: 2px 2px 8px #61F08E;
+  line-height: 100px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+/* formatting the text of the contact page  */
+.contact-text p{
+  font-size: 25px;
+  text-decoration: underline;
+  padding: 35px 0px;
+}
+.contact-main h2{
+  padding: 50px 0 50px 0;
+}
+.status-main{
+  padding: 100px 500px;
+}
+main div a{
+  font-family: wwdig;
+  font-size: 20px;
+  color: #61F08E;
+  display: block;
 }

@@ -360,7 +360,6 @@ footer ul li a{
 .footer-sm{
   width: 60px;
   float: right;
-  padding-bottom: 50px;
 /* overflow: hidden;*/
 }
 .footer-sm img {
