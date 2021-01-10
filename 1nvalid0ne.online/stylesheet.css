@@ -127,23 +127,23 @@ main{
 }
 /* formatting and adding fonts */
 @font-face{
-  src: url(../fonts/d3dig.ttf);
+  src: url(fonts/d3dig.ttf);
   font-family: d3dig;
 }
 @font-face {
-  src: url(../fonts/digfireb.ttf);
+  src: url(fonts/digfireb.ttf);
   font-family: digfireb;
 }
 @font-face {
-  src: url(../fonts/wwDigital.ttf);
+  src: url(fonts/wwDigital.ttf);
   font-family: wwdig;
 }
 @font-face {
-  src: url(../fonts/MHbody.ttf);
+  src: url(fonts/MHbody.ttf);
   font-family: MHbody;
 }
 @font-face {
-  src: url(../fonts/digcoll.ttf);
+  src: url(fonts/digcoll.ttf);
   font-family: digcoll;
 }
         /* desktop formatting */
@@ -236,6 +236,13 @@ main{
             .gallery-img a img:hover{
               border: 2px solid red;
             }
+            .contact-form{
+              text-align: center;
+              text-decoration: none !important;
+            }
+            .contact-form a{
+              font-size: 30px;
+            }
         }
         /* end of desktop formatting */
           /* format for smaller desktop screens   */
@@ -295,6 +302,9 @@ header .header-brand{
         textarea{
           width: 20%;
         }
+        .contact-form{
+          display: none;
+        }
         /*end of mobile config*/                          }
 header nav ul{
   display: block;
@@ -318,7 +328,7 @@ header nav ul li a{
 .index-banner{
   width: 100%;
   height: calc(100vh - 150px);
-  background-image: url('../images/site-banner.jpeg');
+  background-image: url('images/site-banner.jpeg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -411,7 +421,7 @@ p{
 .contact-banner{
   width: 100%;
   height: calc(100vh - 150px);
-  background-image: url('../images/contact-banner.jpeg');
+  background-image: url('images/contact-banner.jpeg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -422,7 +432,7 @@ p{
   display: table-cell;
   vertical-align: middle;
 }
-.contact-banner h2 a{
+.contact-banner h2{
   font-family: digcoll;
   color: #fff;
   font-size: 45px;
