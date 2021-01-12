@@ -104,10 +104,15 @@ input, select {
 
 
 /* MY FORMATTING */
-
+/* pseudo classes can be defined with a colon before them, like :hover */
+:root{
+  --text-color: #cccccc;
+  /* thats how you define a varible */
+}
 
 h1 {
-  color: white;
+  /* you can also define varibles in div's, sections, headers, etc */
+  color: var(--text-color); /* how to call a varible*/
   font-size: 40px;
   text-align: center;
   font-style: italic;
@@ -181,14 +186,11 @@ text-decoration: underline;
 text-transform: uppercase;
 }
 html {
-  margin: auto 10px;
-width: auto;
-height: 2000px;
 background-color:black;
 }
 
 ul {
-
+float: left;
 
 }
 
@@ -197,6 +199,7 @@ ul li {
   display: inline-block;
   float: left;
   line-height: 60px;
+  position: relative;
 }
 ul li a {
 text-decoration: none;
@@ -207,6 +210,28 @@ font-family: cursive;
 padding: 0 20px;
 text-align: center;
 }
+nav ul li ul{
+display: none;
+position: absolute;
+background-color: orange;
+padding: 2px;
+border-radius:0px 0px 4px 4px;
+}
+nav ul li:hover ul{
+  display: block;
+}
+nav ul li ul li{
+  width: 180px;
+  border-radius: 4px;
+}
+nav ul li ul li a{
+  padding: 8px 4px;
+
+}
+nav ul li ul li a:hover{
+  background-color: grey;
+
+}
 ul li a:hover {
 color: blue;
 display: block;
@@ -215,10 +240,10 @@ display: block;
 .menus {
   width: 100%;
   height: 100px;;
-  background-color: #59F56B;
+  background-color: orange;
   outline-color: invert;
 }
-.menu-head {
+nav {
   text-decoration: underline;
   text-align: center;
 }
@@ -227,11 +252,18 @@ a:hover {
 }
 .wrapper {
   margin: 0 auto;
-  width: 1150px;
+  width: 80%;
 
 }
 .index-intro {
   color: red;
   font-size: 10px;
 
+}
+body{
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background-image: url(../../1nvalid0ne.online/images/141_Narmaya_4KDesktop_V04.jpg);
 }

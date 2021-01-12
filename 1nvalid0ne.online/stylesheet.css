@@ -104,6 +104,9 @@ input, select {
 
 /* my formatting */
 /* ----------------------tablet website is still broken so i'll have to patch that------------------------------ */
+:root{
+  --transition: all .40s ease-in-out;
+}
 *{
   text-decoration: none;
 }
@@ -146,6 +149,10 @@ main{
   src: url(fonts/digcoll.ttf);
   font-family: digcoll;
 }
+@font-face{
+    src: url(fonts/apr.ttf);
+    font-family: sumstyle;
+}
         /* desktop formatting */
         @media only screen and (min-width: 1000px){
           * a:hover{
@@ -156,10 +163,31 @@ main{
             margin: 0 auto;
           }
             header .header-brand{
-              text-align: center;
+              text-align: center
             }
             header nav ul li{
               padding-top: 10px;
+              position: relative;
+            }
+            header nav ul li ul{
+              padding-left: 20px;
+              padding: 2px;
+              display: none;
+              position: absolute;
+              padding: 8px;
+              background-color: #111;
+              border-radius:0px 0px 4px 4px;
+            }
+            header nav ul li:hover ul {
+              display: block;
+              margin: 0 auto;
+            }
+            header nav ul li ul li{
+              width: 100px;
+              padding: inherit;
+            }
+            header nav ul li ul li a{
+              padding: 6px;
             }
             header .header-brand:hover{
               text-shadow: 2px 2px 8px red;
@@ -246,7 +274,14 @@ main{
         }
         /* end of desktop formatting */
           /* format for smaller desktop screens   */
-          @media only screen and (max-width: 1600px, min-width: 1000px){
+          @media only screen and (max-width: 1400px){
+              .footer-special{
+                  position: relative !important;
+                  bottom: 0;
+              }
+              .archive-links div{
+                    width: calc(186px + 10%) !important;
+              }
           }
           /* end of desktop formatting #2 */
 /* formatting the menus */
@@ -290,6 +325,9 @@ header .header-brand{
         header nav ul li{
           margin: 0 auto;
         }
+        header nav ul li ul{
+          display: none;
+        }
         .back-header{
           display: none;
         }
@@ -302,8 +340,18 @@ header .header-brand{
         textarea{
           width: 20%;
         }
-        .contact-form{
+        .contact-  border-right: 1px solid #61F08E;form{
           display: none;
+        }
+        .footer-special{
+          position: relative !important;
+          bottom: 0;
+        }
+        .status-main{
+        }
+        .wrapper-sequel{
+          width: 40%;
+          margin: 0 auto;
         }
         /*end of mobile config*/                          }
 header nav ul{
@@ -400,7 +448,7 @@ main h2{
 }
 p{
   padding-top: 10px;
-  font-family: MHbody;
+  font-family: MHbody, sumstyle;
   color: #C3C9D6;
   text-indent: 20px;
   font-size: 18px;
@@ -565,6 +613,15 @@ footer{
   overflow: hidden;
   position: absolute;
   bottom: 0;
+}
+.footer-dt{
+  width: calc(100% - 80px);
+  padding: 40px 40px;
+  background-color: #111;
+  margin-top: 20px;
+  overflow: hidden;
+  position: absolute !important;
+  bottom: 1px;
 }
 footer ul {
   width: fit-content;
